@@ -1,17 +1,18 @@
 package org.example.controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.Connection; //representa a conexão com o BD
+import java.sql.DriverManager;// gerencia a conexão  JDBC
+import java.sql.SQLException;// trata erros de SQL
 
 public class Conexao {
     private static Conexao instancia;
     private static String DRIVER = "org.sqlite.JDBC";
-    private static String DB = "jdbc:sqlite:resources/bdvendas.db";
+    private static String DB = "jdbc:sqlite:src/main/resources/bdvendas.db";
     private static Connection conexao;
-    public Conexao() {}
 
-    private static Conexao getInstance(){
+    private Conexao() {}
+
+    public static Conexao getInstance(){
         if(instancia == null){
             instancia = new Conexao();
         }
@@ -20,9 +21,11 @@ public class Conexao {
 
     public Connection iniciarConexao(){
         try {
-            Class.forName(DRIVER);
-            conexao = DriverManager.getConnection(DB);
-            conexao.setAutoCommit(false);
+           if (conexao == null || conexao.isClosed()){
+               Class.forName(DRIVER);
+               conexao = DriverManager.getConnection(DB);
+               conexao.setAutoCommit(false);
+           }
         } catch (SQLException  | ClassNotFoundException e) {
             System.out.println("ERRO AO CONECTAR COM BANCOS DE DADOS"+e.getMessage());
         }

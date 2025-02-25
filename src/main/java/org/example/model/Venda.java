@@ -1,23 +1,23 @@
 package org.example.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Venda {
-    private int id;
+    private Integer id;
     private double valor;
     private Date dataDaVenda;
 
-    public Venda(int id, double valor, Date dataDaVenda) {
+    public Venda(Integer id, double valor, Date dataDaVenda) {
         this.id = id;
         this.valor = valor;
         this.dataDaVenda = dataDaVenda;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -36,5 +36,4 @@ public class Venda {
     public void setDataDaVenda(Date dataDaVenda) {
         this.dataDaVenda = dataDaVenda;
     }
-
 }
