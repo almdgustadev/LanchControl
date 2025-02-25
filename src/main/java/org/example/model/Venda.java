@@ -7,7 +7,8 @@ public class Venda {
     private double valor;
     private Date dataDaVenda;
 
-    public Venda(double valor, Date dataDaVenda) {
+    public Venda(int id, double valor, Date dataDaVenda) {
+        this.id = id;
         this.valor = valor;
         this.dataDaVenda = dataDaVenda;
     }
