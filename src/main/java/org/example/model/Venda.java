@@ -13,6 +13,11 @@ public class Venda {
         this.dataDaVenda = dataDaVenda;
     }
 
+    public Venda(double valor, Date dataDaVenda) {
+        this.valor = valor;
+        this.dataDaVenda = dataDaVenda;
+    }
+
     public Integer getId() {
         return id;
     }

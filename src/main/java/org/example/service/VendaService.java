@@ -2,8 +2,6 @@ package org.example.service;
 
 import org.example.dao.VendaDAO;
 import org.example.model.Venda;
-
-import javax.swing.*;
 import java.sql.Date;
 import java.util.List;
 
@@ -11,12 +9,12 @@ public class VendaService {
     private VendaDAO vendaDAO;
 
     public VendaService(VendaDAO vendaDAO) {
-        this.vendaDAO = new VendaDAO();
+        this.vendaDAO = vendaDAO;
     }
 
     public void adicionarVenda(Venda venda){
         if(venda.getValor() <=0 ){
-            JOptionPane.showMessageDialog(null, "O valor da venda deve ser maior que 0!", "", JOptionPane.WARNING_MESSAGE);
+            throw new IllegalArgumentException("O valor da venda deve ser maior que 0!");
         }
         vendaDAO.adicionarVenda(venda);
     }

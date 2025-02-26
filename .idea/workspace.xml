@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="geranddo banco de dados, add VendaDAO e implementando seus metodos.">
+    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add VendaService e seus metodos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/VendaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/PersistenciaException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,13 +100,22 @@
       <option name="project" value="LOCAL" />
       <updated>1740501655946</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add VendaService e seus metodos">
+      <option name="closed" value="true" />
+      <created>1740520983661</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740520983661</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="começando conexao com db" />
     <MESSAGE value="add o id no construtor de Venda" />
     <MESSAGE value="geranddo banco de dados, add VendaDAO e implementando seus metodos." />
-    <option name="LAST_COMMIT_MESSAGE" value="geranddo banco de dados, add VendaDAO e implementando seus metodos." />
+    <MESSAGE value="add VendaService e seus metodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="add VendaService e seus metodos" />
   </component>
 </project>

@@ -2,8 +2,8 @@ package org.example.dao;
 
 import org.example.controller.Conexao;
 import org.example.model.Venda;
+import org.example.exception.PersistenciaException;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,10 +40,8 @@ public class VendaDAO {
 
             preparedStatement.execute();
             connection.commit();
-            JOptionPane.showMessageDialog(null, "Venda incluída com sucesso!");
-
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new PersistenciaException("Erro ao adicionar venda no banco de dados: " + e.getMessage(),e);
         }finally {
             encerrarConexao();
         }
@@ -65,12 +63,9 @@ public class VendaDAO {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new PersistenciaException("Erro ao listar vendas: " + e.getMessage(), e);
         }finally {
             encerrarConexao();
-        }
-        if (vendas.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Não há vendas cadastradas", "", JOptionPane.WARNING_MESSAGE);
         }
         return vendas;
     }
@@ -89,10 +84,8 @@ public class VendaDAO {
 
             preparedStatement.execute();
             connection.commit();
-            JOptionPane.showMessageDialog(null, "Venda alterada com sucesso!");
-
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new PersistenciaException("Erro ao alterar venda: " +e.getMessage(), e);
         }finally {
             encerrarConexao();
         }
@@ -109,7 +102,7 @@ public class VendaDAO {
                 }
                 Conexao.getInstance().encerrarConexao();
             } catch (SQLException e) {
-                throw new RuntimeException(e);
+                throw new PersistenciaException(e.getMessage());
             }
 
     }
