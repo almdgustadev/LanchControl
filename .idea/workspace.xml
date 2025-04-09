@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add VendaService e seus metodos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/VendaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/PersistenciaException.java" afterDir="false" />
+    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/ConnectionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/Conexao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VendaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +57,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.DB.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PROGRAMAÇÃO/LanchControl/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PROGRAMAÇÃO/LanchControl&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -108,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740520983661</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service">
+      <option name="closed" value="true" />
+      <created>1740577749985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740577749985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,6 +131,7 @@
     <MESSAGE value="add o id no construtor de Venda" />
     <MESSAGE value="geranddo banco de dados, add VendaDAO e implementando seus metodos." />
     <MESSAGE value="add VendaService e seus metodos" />
-    <option name="LAST_COMMIT_MESSAGE" value="add VendaService e seus metodos" />
+    <MESSAGE value="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service" />
   </component>
 </project>
