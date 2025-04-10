@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" afterDir="false" />
+    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="alterando toda estrutura do projeto, alterando db para postgres, add flyway ao projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/Conexao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VendaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VendaDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Venda.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740577749985</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="alterando toda estrutura do projeto, alterando db para postgres, add flyway ao projeto">
+      <option name="closed" value="true" />
+      <created>1744167745631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744167745631</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -132,6 +132,7 @@
     <MESSAGE value="geranddo banco de dados, add VendaDAO e implementando seus metodos." />
     <MESSAGE value="add VendaService e seus metodos" />
     <MESSAGE value="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add nova exception, novo construtor sem id na model,iniciando controller, retirando JOption da DAO e da service" />
+    <MESSAGE value="alterando toda estrutura do projeto, alterando db para postgres, add flyway ao projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="alterando toda estrutura do projeto, alterando db para postgres, add flyway ao projeto" />
   </component>
 </project>
