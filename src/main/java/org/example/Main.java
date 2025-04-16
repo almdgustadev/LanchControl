@@ -5,6 +5,7 @@ package org.example;
 
 import org.example.persistence.VendaDao;
 import org.example.persistence.entity.Venda;
+import org.example.service.VendaService;
 import org.flywaydb.core.Flyway;
 
 import java.math.BigDecimal;
@@ -14,6 +15,8 @@ import java.time.LocalDate;
 public class Main {
 
     private final static VendaDao vendaDao =  new VendaDao();
+    private final static VendaService vendaService =  new VendaService(vendaDao);
+
 
     public static void main(String[] args) {
       /* var flyway = Flyway.configure()
@@ -37,7 +40,12 @@ public class Main {
         venda.setDataDaVenda(LocalDate.parse("2025-02-21"));
         vendaDao.alterarVenda(venda);*/
 
-        vendaDao.deletarVenda(1);
+
+        /*var venda = new Venda();
+        venda.setValor(new BigDecimal("500"));
+        venda.setDataDaVenda(LocalDate.parse("2025-03-10"));
+        vendaService.salvarVenda(venda);*/
+
     }
 
 
