@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      style="-fx-background-color: #fdf6e3; -fx-padding: 40; -fx-background-radius: 10;">
+
+    <Text text="Buscar Venda por Data"
+          style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #880e4f;" />
+
+    <TextField fx:id="campoData" promptText="Digite a data (dd/MM/yyyy)"
+               style="-fx-font-size: 16px; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #d81b60; -fx-border-width: 2;"
+               maxWidth="250" />
+
+    <Button text="Buscar" onAction="#buscarVendaPorData"
+            style="-fx-font-size: 16px; -fx-background-color: #d81b60; -fx-text-fill: white; -fx-background-radius: 8;"
+            prefWidth="250" />
+
+    <ListView fx:id="listaVendas"
+              style="-fx-background-radius: 8; -fx-border-color: #d81b60; -fx-border-radius: 8; -fx-border-width: 2;"
+              prefHeight="250" prefWidth="300" />
+</VBox>
