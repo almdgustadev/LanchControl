@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add service e verificacao do metodo de salvarVenda, validando data e valor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/view/telaBuscarPorData.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/view/telaCadastroVenda.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/view/telaInicial.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/view/telaMeses.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/view/teleVendasPorDia.fxml" afterDir="false" />
+    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="criacao das telas, e add a tela principal a main">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaMesesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaVendasDoMesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/estilos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/persistence/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaInicial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaInicial.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/teleVendasPorDia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/teleVendasPorDia.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,25 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DB.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/PROGRAMAÇÃO/javafx-sdk-24.0.1",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4218391",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DB.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PROGRAMAÇÃO/LanchControl&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4218391&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\PROGRAMAÇÃO\LanchControl\src\main\java\org\example\view" />
       <recent name="C:\PROGRAMAÇÃO\LanchControl\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\PROGRAMAÇÃO\LanchControl\src\main\resources\view" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744770755215</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="criacao das telas, e add a tela principal a main">
+      <option name="closed" value="true" />
+      <created>1746759379019</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746759379019</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +193,7 @@
     <MESSAGE value="alterando toda estrutura do projeto, alterando db para postgres, add flyway ao projeto" />
     <MESSAGE value="alterando o tipo da data, add todo o CRUD ao projeto" />
     <MESSAGE value="add service e verificacao do metodo de salvarVenda, validando data e valor" />
-    <option name="LAST_COMMIT_MESSAGE" value="add service e verificacao do metodo de salvarVenda, validando data e valor" />
+    <MESSAGE value="criacao das telas, e add a tela principal a main" />
+    <option name="LAST_COMMIT_MESSAGE" value="criacao das telas, e add a tela principal a main" />
   </component>
 </project>

@@ -1,0 +1,36 @@
+.titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e2e2e;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.botao {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: #f4b9b9;
+    -fx-text-fill: black;
+    -fx-padding: 10 20 10 20;
+    -fx-border-color: #7a4d4d;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.botao:hover {
+    -fx-opacity: 0.8;
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6, 0, 0, 2);
+}
+
+.botao:pressed {
+    -fx-opacity: 0.6;
+    -fx-translate-y: 1;
+}
+
+.logo {
+    -fx-font-size: 16px;
+    -fx-text-fill: #a37474;
+    -fx-font-family: "Comic Sans MS";
+    -fx-effect: dropshadow(one-pass-box, #999, 2, 0, 1, 1);
+}
