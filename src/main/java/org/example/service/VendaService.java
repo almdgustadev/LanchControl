@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.Getter;
 import org.example.persistence.VendaDao;
 import org.example.persistence.entity.Venda;
 
@@ -9,22 +10,27 @@ import java.time.LocalDate;
 public class VendaService {
     private final VendaDao vendaDao;
 
+    @Getter
+    private String message;
+
 
     public VendaService(VendaDao vendaDao){
         this.vendaDao = vendaDao;
     }
 
-    public void salvarVenda(Venda venda){
+    public boolean salvarVenda(Venda venda){
         if (venda.getValor().compareTo(new BigDecimal("0")) < 0){
-            System.out.println("O valor da venda tem que ser maior que zero!");
-            return;
+            message ="O valor da venda tem que ser maior que zero!" ;
+            System.out.println(message);
+            return false;
         }
-        if (venda.getDataDaVenda().getDayOfMonth() > LocalDate.now().getDayOfMonth() || venda.getDataDaVenda().getMonthValue() > LocalDate.now().getMonthValue() ||
-                venda.getDataDaVenda().getYear() > LocalDate.now().getYear()){
-            System.out.println("A data da venda tem que ser menor/igual a atual!");
-            return;
+        if (venda.getDataDaVenda().isAfter(LocalDate.now())){
+            message ="A data da venda tem que ser menor/igual a atual!";
+            System.out.println(message);
+            return false;
         }
         vendaDao.adicionarVenda(venda);
+        return true;
     }
 
 

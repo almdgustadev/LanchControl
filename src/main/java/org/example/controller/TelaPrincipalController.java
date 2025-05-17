@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -15,6 +14,19 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TelaPrincipalController implements Initializable {
+
+    private void abrirTela(String caminhoFXML,ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(caminhoFXML));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     private Button button_buscar;
@@ -34,17 +46,19 @@ public class TelaPrincipalController implements Initializable {
 
     }
     @FXML
-    void irParaCadastro(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/telaCadastroVenda.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+    void abrirTelaCadastro(ActionEvent event) {
+        abrirTela("/view/telaCadastroVenda.fxml",event);
     }
+
+    @FXML
+    void abrirTelaVenda(ActionEvent event) {
+        abrirTela("/view/telaMeses.fxml",event);
+    }
+
+    @FXML
+    void abrirTelaDeBusca(ActionEvent event) {
+        abrirTela("/view/telaBuscarPorData.fxml",event);
+    }
+
+
 }

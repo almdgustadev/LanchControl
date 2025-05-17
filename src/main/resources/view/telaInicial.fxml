@@ -23,9 +23,9 @@
             <Label styleClass="titulo" text="Controle de Vendas" />
 
             <GridPane alignment="CENTER" hgap="50" vgap="30">
-                <Button fx:id="button_cadastrar" onAction="#irParaCadastro" styleClass="botao" text="Cadastrar Venda" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <Button fx:id="button_vendas" styleClass="botao" text="Vendas por mês" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <Button fx:id="button_buscar" prefHeight="43.0" prefWidth="156.0" styleClass="botao" text="Buscar Venda" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button fx:id="button_cadastrar" onAction="#abrirTelaCadastro" styleClass="botao" text="Cadastrar Venda" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Button fx:id="button_vendas" onAction="#abrirTelaVenda" styleClass="botao" text="Vendas por mês" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Button fx:id="button_buscar" onAction="#abrirTelaDeBusca" prefHeight="43.0" prefWidth="156.0" styleClass="botao" text="Buscar Venda" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                 <Button fx:id="button_exportar" prefHeight="43.0" prefWidth="151.0" styleClass="botao" text="Exportar XLS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <columnConstraints>
                <ColumnConstraints />

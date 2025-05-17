@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="criacao das telas, e add a tela principal a main">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaMesesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaVendasDoMesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/estilos.css" afterDir="false" />
+    <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add animacao aos botoes, adicionando funcionalidade ao botao de cadastro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/entity/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaInicial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaInicial.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/teleVendasPorDia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/teleVendasPorDia.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746759379019</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add animacao aos botoes, adicionando funcionalidade ao botao de cadastro">
+      <option name="closed" value="true" />
+      <created>1747363908595</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747363908595</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,6 +198,7 @@
     <MESSAGE value="alterando o tipo da data, add todo o CRUD ao projeto" />
     <MESSAGE value="add service e verificacao do metodo de salvarVenda, validando data e valor" />
     <MESSAGE value="criacao das telas, e add a tela principal a main" />
-    <option name="LAST_COMMIT_MESSAGE" value="criacao das telas, e add a tela principal a main" />
+    <MESSAGE value="add animacao aos botoes, adicionando funcionalidade ao botao de cadastro" />
+    <option name="LAST_COMMIT_MESSAGE" value="add animacao aos botoes, adicionando funcionalidade ao botao de cadastro" />
   </component>
 </project>

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane style="-fx-background-color: #FFF1BD;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TelaBuscarPorDataController">
+<BorderPane style="-fx-background-color: #FFF1BD;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TelaBuscarPorDataController">
 
     <center>
         <VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="20" BorderPane.alignment="CENTER">
@@ -24,7 +24,7 @@
                </opaqueInsets></DatePicker>
             </VBox>
 
-            <Button styleClass="botao" text="Buscar" />
+            <Button fx:id="button_buscarVenda" onAction="#buscarVenda" styleClass="botao" text="Buscar" />
         </VBox>
     </center>
 </BorderPane>
