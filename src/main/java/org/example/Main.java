@@ -22,7 +22,7 @@ public class Main extends Application {
     private final static VendaService vendaService =  new VendaService(vendaDao);
     
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/view/telaInicial.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/telaPrincipal.fxml"));
 
         Scene scene = new Scene(root);
 

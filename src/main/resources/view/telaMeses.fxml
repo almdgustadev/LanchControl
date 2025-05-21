@@ -12,15 +12,18 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane style="-fx-background-color: #FFF1BD;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TelaMesesController">
+<BorderPane style="-fx-background-color: #FFF1BD;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TelaMesesController">
 
     <center>
-        <VBox alignment="CENTER" spacing="40">
+        <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="512.0" spacing="40">
             <padding>
                 <Insets bottom="50" left="50" right="50" top="50" />
             </padding>
 
-            <Label styleClass="titulo" text="Vendas por Mês" />
+            <Label styleClass="titulo" text="Vendas por Mês">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin></Label>
 
             <VBox alignment="CENTER" spacing="20">
                 <HBox alignment="CENTER" spacing="10">
@@ -41,23 +44,24 @@
                         <RowConstraints />
                     </rowConstraints>
 
-                    <Button styleClass="botao" text="Janeiro" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                    <Button styleClass="botao" text="Fevereiro" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                    <Button styleClass="botao" text="Março" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                    <Button fx:id="button_jan" onAction="#abrirJan" styleClass="botao" text="Janeiro" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Button fx:id="button_fev" onAction="#abrirFev" styleClass="botao" text="Fevereiro" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Button fx:id="button_mar" onAction="#abrirMar" styleClass="botao" text="Março" GridPane.columnIndex="2" GridPane.rowIndex="0" />
 
-                    <Button styleClass="botao" text="Abril" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                    <Button styleClass="botao" text="Maio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <Button styleClass="botao" text="Junho" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Button fx:id="button_abr" onAction="#abrirAbril" styleClass="botao" text="Abril" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Button fx:id="button_mai" onAction="#abrirMaio" styleClass="botao" text="Maio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Button fx:id="button_jun" onAction="#abrirJun" styleClass="botao" text="Junho" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
-                    <Button styleClass="botao" text="Julho" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                    <Button styleClass="botao" text="Agosto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <Button styleClass="botao" text="Setembro" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <Button fx:id="button_jul" onAction="#abrirJul" styleClass="botao" text="Julho" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Button fx:id="button_ago" onAction="#abrirAgo" styleClass="botao" text="Agosto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Button fx:id="button_set" onAction="#abrirSet" styleClass="botao" text="Setembro" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
-                    <Button styleClass="botao" text="Outubro" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                    <Button styleClass="botao" text="Novembro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                    <Button styleClass="botao" text="Dezembro" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                    <Button fx:id="button_out" onAction="#abrirOut" styleClass="botao" text="Outubro" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <Button fx:id="button_nov" onAction="#abrirNov" styleClass="botao" text="Novembro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Button fx:id="button_dez" onAction="#abrirDez" styleClass="botao" text="Dezembro" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                 </GridPane>
             </VBox>
+         <Button fx:id="button_voltar" onAction="#voltarTela" styleClass="botao" text="Voltar" />
         </VBox>
     </center>
 

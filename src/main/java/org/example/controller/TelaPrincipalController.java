@@ -20,7 +20,7 @@ public class TelaPrincipalController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(caminhoFXML));
             Parent root = loader.load();
 
-            Stage stage = new Stage();
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {

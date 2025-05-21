@@ -15,7 +15,7 @@
 <BorderPane style="-fx-background-color: #FFF1BD;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TelaPrincipalController">
 
     <center>
-        <VBox alignment="CENTER" spacing="40">
+        <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="512.0" spacing="40">
             <padding>
                 <Insets bottom="50" left="50" right="50" top="50" />
             </padding>
@@ -40,7 +40,7 @@
     </center>
 
     <bottom>
-        <StackPane alignment="BOTTOM_CENTER" style="-fx-padding: 10;">
+        <StackPane alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="512.0" style="-fx-padding: 10;">
             <ImageView fitHeight="200" fitWidth="300" preserveRatio="true">
                 <Image url="@logo.png" />
             <StackPane.margin>
