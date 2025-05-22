@@ -29,8 +29,18 @@ public class VendaService {
             System.out.println(message);
             return false;
         }
-        vendaDao.adicionarVenda(venda);
-        return true;
+        try {
+            vendaDao.adicionarVenda(venda);
+            return true;
+        } catch (Exception e) {
+            if (e.getMessage().contains("vendas_data_da_venda_key")) {
+                message = "Já existe uma venda cadastrada para essa data.";
+            } else {
+                message = "Erro ao salvar venda: " + e.getMessage();
+            }
+            e.printStackTrace();
+            return false;
+        }
     }
 
 

@@ -49,26 +49,25 @@ public class TelaCadastroVendaController {
             BigDecimal valor = new BigDecimal(valorEmTexto);
             venda.setValor(valor);
 
-            vendaService.salvarVenda(venda);
-            if (vendaService.salvarVenda(venda)) {
+            boolean tentativaDeCadastro = vendaService.salvarVenda(venda);
+            if (tentativaDeCadastro) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Sucesso");
                 alert.setHeaderText("Venda salva com sucesso!");
-                alert.show();
+                alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erro");
                 alert.setHeaderText(vendaService.getMessage());
-                alert.show();
+                alert.showAndWait();
             }
 
         } catch (NumberFormatException e) {
             Alert alert =  new Alert(Alert.AlertType.ERROR);
             alert.setTitle("ERROR");
             alert.setHeaderText("Valor inválido! Digite um número válido.");
-            alert.show();
+            alert.showAndWait();
         }
-
 
     }
 

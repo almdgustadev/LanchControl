@@ -20,6 +20,7 @@ public class VendaDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -34,6 +35,7 @@ public class VendaDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -47,6 +49,7 @@ public class VendaDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -66,6 +69,7 @@ public class VendaDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return vendas;
@@ -85,8 +89,36 @@ public class VendaDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return venda;
+    }
+
+    public List<Venda> listarPorMesEAno(int mes, int ano) {
+        List<Venda> vendas = new ArrayList<>();
+        var sql = "SELECT * FROM vendas WHERE EXTRACT(MONTH FROM data_da_venda) = ? AND EXTRACT(YEAR FROM data_da_venda) = ? ORDER BY data_da_venda";
+
+        try (var connection = ConnectionUtil.getConnection();
+             var statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, mes);
+            statement.setInt(2, ano);
+
+            var resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                Venda venda = new Venda();
+                venda.setValor(resultSet.getBigDecimal("valor"));
+                venda.setDataDaVenda(resultSet.getDate("data_da_venda").toLocalDate());
+                vendas.add(venda);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+        return vendas;
     }
 }

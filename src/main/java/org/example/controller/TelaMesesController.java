@@ -1,23 +1,34 @@
 package org.example.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 
-public class TelaMesesController  {
+public class TelaMesesController implements Initializable {
 
-    private void abrirTela(String caminhoFXML, ActionEvent event){
+    private void abrirTela(String caminhoFXML,int mes, int ano,ActionEvent event){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(caminhoFXML));
             Parent root = loader.load();
+
+            TelaVendasDoMesController controller = loader.getController();
+
+            controller.receberMesAno(mes,ano);
 
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -41,6 +52,8 @@ public class TelaMesesController  {
         }
 
     }
+
+
     @FXML
     private Button button_abr;
 
@@ -78,67 +91,185 @@ public class TelaMesesController  {
     private Button button_set;
 
     @FXML
-    private ComboBox<?> comboAno;
+    private ComboBox<Integer> comboAno;
+
 
     @FXML
     void abrirJan(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 1;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();        }
     }
 
     @FXML
     void abrirFev(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 2;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirMar(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 3;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirAbril(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 4;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirMaio(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 5;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirJun(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 6;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirJul(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 7;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
         @FXML
     void abrirAgo(ActionEvent event) {
-            abrirTela("/view/telaVendasDoMes.fxml",event);
+            int mes = 8;
+            Integer anoSelecionado = comboAno.getValue();
+            if (anoSelecionado != null) {
+                abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Erro");
+                alert.setHeaderText("Selecione um ano antes de prosseguir");
+                alert.showAndWait();
+            }
     }
 
     @FXML
     void abrirSet(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 9;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirOut(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 10;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirNov(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 11;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void abrirDez(ActionEvent event) {
-        abrirTela("/view/telaVendasDoMes.fxml",event);
+        int mes = 12;
+        Integer anoSelecionado = comboAno.getValue();
+        if (anoSelecionado != null) {
+            abrirTela("/view/telaVendasDoMes.fxml", mes, anoSelecionado, event);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Selecione um ano antes de prosseguir");
+            alert.showAndWait();
+        }
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<Integer> anos = FXCollections.observableArrayList();
+        int anoAtual = LocalDate.now().getYear();
+        for(int ano = 2000 ; ano <= anoAtual ; ano++){
+            anos.add(ano);
+        }
+        comboAno.setItems(anos);
+
+    }
 }

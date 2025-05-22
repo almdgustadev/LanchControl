@@ -6,18 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="49f29514-f950-4b17-b8de-49a75d53d71c" name="Changes" comment="add funcionalidade aos botoes da tela principal, add funcionalidade a cadastro e busca de venda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaBuscarPorDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaCadastroVendaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaMesesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaMesesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaPrincipalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaVendasDoMesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TelaVendasDoMesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaBuscarPorData.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaCadastroVenda.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaInicial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaMeses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/teleVendasPorDia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/telaVendasDoMes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/persistence/VendaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/VendaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
